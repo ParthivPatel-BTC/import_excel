@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  process_id: MyText
+  is_running: false
+
+two:
+  process_id: MyText
+  is_running: false

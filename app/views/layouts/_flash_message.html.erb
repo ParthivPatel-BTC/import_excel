@@ -1,0 +1,24 @@
+<% flash.each do |name, message|
+  next if message.blank?
+  css_class = ''
+  icon_class = ''
+  
+  case name
+    when 'alert'
+      css_class = 'alert-danger'
+      icon_class = 'fa-ban'
+    when 'notice'
+      css_class = 'alert-success'
+      icon_class = 'fa-check'
+    when 'warning'
+      css_class = 'alert-warning'
+      icon_class = 'fa-warning'
+    end
+  %>
+  
+  <div style="margin-top:18px;" class="alert <%= css_class %>">
+      <a title="close" aria-label="close" data-dismiss="alert" class="close" href="#">×</a>
+      <%= message %>
+  </div>
+<% end 
+flash.clear %>

@@ -1,0 +1,20 @@
+<% if @products.present? %>
+  <h1>Products</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= product.title %></td>
+          <td><%= product.description %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+<%= paginate @products if @products.present? %>
